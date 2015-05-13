@@ -6,11 +6,11 @@
   <body>
     <h2>Kurzprofil</h2>
     <p>
-      Name des Lehrers: <%= @name %><br/>
+      Name des Lehrers: <%= @teacher_name %><br/>
       Schule: <%= @school %><br/>
       Art der Veranstaltung: <%= @event %><br/>
-      Datum und Uhrzeit: <%= @datetime %><br/>
-      E-Mail: <%= @email %><br/>
+      Datum und Uhrzeit: <%= @appointment %><br/>
+      E-Mail: <a href="<%= @teacher_email %>"><%= @teacher_email %></a><br/>
     </p>
     <h2>Original-Nachricht</h2>
     <p>
