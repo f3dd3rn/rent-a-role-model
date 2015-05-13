@@ -4,29 +4,9 @@ ruby '2.1.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
-gem 'mail_form'
 
-# Use sqlite3 as the database for Active Record
-group :development do
-  gem 'sqlite3'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  #MailCatcher runs a super simple SMTP server which catches any message sent to it to display in a web interface.
-  #check out http://127.0.0.1:1080 to see the mail.
-  gem 'mailcatcher'
-  gem 'pry'
-end
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-end
-group :coverage do
-  gem 'simplecov', :require => false
-end
+gem 'mail_form'
+gem 'xing_api'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -49,12 +29,36 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+group :development do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  #MailCatcher runs a super simple SMTP server which catches any message sent to it to display in a web interface.
+  #check out http://127.0.0.1:1080 to see the mail.
+  gem 'mailcatcher'
+  gem 'pry'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
+group :coverage do
+  gem 'simplecov', :require => false
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-gem 'xing_api'
 #gem 'bootstrap-sass-rails'
 
 # Use ActiveModel has_secure_password
