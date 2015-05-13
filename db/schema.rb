@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140619184535) do
 
-  create_table "user_informations", force: true do |t|
+  create_table "user_informations", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "why"
     t.text     "past"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20140619184535) do
 
   add_index "user_informations", ["user_id"], name: "index_user_informations_on_user_id"
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "city"
     t.string   "email"
