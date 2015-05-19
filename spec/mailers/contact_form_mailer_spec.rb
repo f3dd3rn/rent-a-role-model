@@ -26,6 +26,7 @@ describe ContactFormMailer do
       expect(mail.body.encoded).to include(content)
     end
   end
+  
 
   it "is from 'tina.tester@school.com'" do
     expect(mail.from).to include('tina.tester@penn-high-school.com')
